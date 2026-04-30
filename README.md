@@ -1,19 +1,11 @@
 # Vehicle_To_Vehicle_Communication_And_CAN_Data_Logger
-Overview :
-This project implements a real-time embedded system for vehicle-to-vehicle (V2V) communication using a multi-ECU architecture.
-The system enables vehicles to exchange data and automatically adjust speed based on obstacle detection, improving road safety.
-
-Key Features:
-•	SPI communication between STM32 and ESP32
-•	ESP-NOW based wireless V2V communication
-•	CAN communication between ECUs
-•	Ultrasonic sensor for obstacle detection
-•	PWM-based DC motor speed control
-•	FreeRTOS-based task management
-•	CAN Data Logging for monitoring system parameters
-
-System Architecture:
+________________________________________
+ Overview
+This project implements vehicle-to-vehicle communication using CAN protocol and logs data for analysis in real-time embedded systems.
+________________________________________
+System Architecture
 STM32-1 → SPI → ESP32-1 → ESP-NOW → ESP32-2 → SPI → STM32-2 → CAN → STM32-3
+________________________________________
 Working Flow
 1. Front vehicle ECU (STM32-1) generates speed and steering data
 2. Data is sent to ESP32 via SPI
@@ -22,34 +14,49 @@ Working Flow
 5. STM32-2 reads ultrasonic sensor data and applies safety logic
 6. Control commands are sent via CAN to STM32-3
 7. STM32-3 controls motor speed using PWM and activates alerts
-
-My Contribution:
+________________________________________
+ My Contributions
 •	Implemented CAN communication (configuration, framing, filtering)
 •	Developed interrupt-based SPI communication
 •	Integrated ultrasonic sensor using timer input capture
 •	Implemented PWM-based motor control
 •	Designed FreeRTOS task structure and inter-task communication
-•	Performed system integration and debugging
-
-Technologies Used:
+•	Performed complete system integration and debugging
+________________________________________
+Technologies Used
 •	Embedded C
 •	STM32 (ARM Cortex-M)
 •	ESP32 (ESP-NOW)
 •	FreeRTOS
 •	SPI, CAN Protocols
-•	Ultrasonic Sensor (HC-SR04)
+•	Ultrasonic Sensor 
 •	PWM, Timers
-
-Project Structure:
-src/   - Source files (SPI, CAN, Motor, RTOS, Ultrasonic)
-inc/ - Header files
-README.md – Project documentation
-
-Future Improvements:
+________________________________________
+ Project Structure
+src/   → Source files (SPI, CAN, Motor, RTOS, Ultrasonic)
+inc/   → Header files
+README.md → Project documentation
+________________________________________
+ Features
+•	Real-time CAN communication
+•	Data logging system
+•	Multi-tasking using FreeRTOS
+•	Sensor integration and motor control
+________________________________________
+ Future Improvements
 •	Replace ultrasonic sensor with radar
 •	Add GPS-based vehicle tracking
-•	Implement cloud data logging
+•	Implement cloud-based data logging
 •	Upgrade to AUTOSAR architecture
+________________________________________
+ Conclusion
+  This project demonstrates strong understanding of:
+•	Embedded systems
+•	Real-time communication
+•	Multi-ECU automotive architecture
+•	Hardware-software integration
+________________________________________
+ Author
+Prathamesh Gatkal
 
-Conclusion:
-This project demonstrates strong understanding of embedded systems, real-time communication, multi-ECU automotive architecture, and hardware-software integration.
+
