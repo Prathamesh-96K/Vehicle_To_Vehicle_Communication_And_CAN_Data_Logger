@@ -50,7 +50,7 @@ ________________________________________
 •	Upgrade to AUTOSAR architecture
 ________________________________________
  Conclusion
-  This project demonstrates strong understanding of:
+  This project demonstrates strong understanding of
 •	Embedded systems
 •	Real-time communication
 •	Multi-ECU automotive architecture
